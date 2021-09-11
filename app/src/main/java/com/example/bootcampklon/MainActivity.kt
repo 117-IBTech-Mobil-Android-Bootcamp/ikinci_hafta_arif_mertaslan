@@ -12,11 +12,14 @@ class MainActivity : AppCompatActivity() {
 
         val startButton: Button = findViewById(R.id.first_screen_button)
 
-        val questionWord: String = ""
+        val questionWord = "Visualize"
+
+        val answers = arrayOf("Görselleştirmek", "Altında", "Bağış", "Ensülin")
 
         startButton.setOnClickListener {
             val intent = Intent(this@MainActivity, WordTestActivity::class.java).apply {
-                putExtra("msg", "question" )
+                putExtra("question", questionWord )
+                putExtra("answers", answers)
             }
             startActivity(intent)
         }

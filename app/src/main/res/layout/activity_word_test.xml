@@ -6,14 +6,12 @@
     tools:context=".WordTestActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/progress_horizontal"
-        android:text="3/10"
+        android:text="@string/progress_test"
         android:textSize="@dimen/text_size_big"
         android:textColor="@color/text_color_dark"
         android:layout_marginEnd="20dp"
@@ -93,6 +91,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/option_a_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@drawable/rounded_checkbox"
@@ -138,6 +137,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/option_b_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@drawable/rounded_checkbox"
@@ -183,6 +183,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/option_c_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@drawable/rounded_checkbox"
@@ -228,6 +229,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/option_d_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@drawable/rounded_checkbox"

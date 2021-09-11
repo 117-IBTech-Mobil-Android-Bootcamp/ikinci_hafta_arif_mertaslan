@@ -7,5 +7,6 @@
     <string name="third_option_name">Option C</string>
     <string name="fourth_option_name">Option D</string>
     <string name="question_word_name">Question</string>
+    <string name="progress_test">3/10</string>
     <string name="first_screen_exp_name">Kelime Testi, sizin dil seviyenizi ölçmek içindir. Test sonunda doğru ve yanlışlarınızı görebileceksiniz</string>
 </resources>
