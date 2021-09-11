@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bootcamp</string>
+    <string name="first_screen_title_name">Kelime Testi</string>
+    <string name="first_screen_button_name">Şimdi Başla</string>
+    <string name="first_option_name">Option A</string>
+    <string name="second_option_name">Option B</string>
+    <string name="third_option_name">Option C</string>
+    <string name="fourth_option_name">Option D</string>
+    <string name="question_word_name">Question</string>
+    <string name="first_screen_exp_name">Kelime Testi, sizin dil seviyenizi ölçmek içindir. Test sonunda doğru ve yanlışlarınızı görebileceksiniz</string>
+</resources>

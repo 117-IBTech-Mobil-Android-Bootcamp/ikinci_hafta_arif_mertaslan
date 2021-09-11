@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".WordTestActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/progress_horizontal"
+        android:text="3/10"
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/text_color_dark"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="370dp"
+        android:layout_height="3dp"
+        android:progress="10"
+        android:layout_marginTop="80dp"
+        android:theme="@style/questionProgressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/question_card"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/question_card"
+        android:layout_width="@dimen/card_view_width"
+        android:layout_height="@dimen/card_view_height_small"
+        app:cardCornerRadius="@dimen/card_view_radious"
+        android:elevation="@dimen/card_view_elevation"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/option_b_card">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/card_view_height_small">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/question_text"
+                android:textColor="@color/text_color_dark"
+                android:textSize="@dimen/text_size_medium"
+                android:text="@string/question_word_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/option_a_card"
+        android:layout_width="@dimen/card_view_width"
+        android:layout_height="@dimen/card_view_height"
+        app:cardCornerRadius="@dimen/card_view_radious"
+        android:elevation="@dimen/card_view_elevation"
+        android:layout_marginTop="@dimen/card_view_top_margin"
+        android:layout_marginStart="@dimen/card_view_side_margin"
+        app:layout_constraintBottom_toTopOf="@id/option_c_card"
+        app:layout_constraintEnd_toStartOf="@id/option_b_card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/card_view_height">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/option_a_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_dark"
+                android:text="@string/first_option_name"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/rounded_checkbox"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option_a_text"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/option_b_card"
+        android:layout_width="@dimen/card_view_width"
+        android:layout_height="@dimen/card_view_height"
+        app:cardCornerRadius="@dimen/card_view_radious"
+        android:elevation="@dimen/card_view_elevation"
+        android:layout_marginTop="@dimen/card_view_top_margin"
+        android:layout_marginEnd="@dimen/card_view_side_margin"
+        app:layout_constraintBottom_toTopOf="@id/option_d_card"
+        app:layout_constraintStart_toEndOf="@id/option_a_card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/card_view_height">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/option_b_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_dark"
+                android:text="@string/second_option_name"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/rounded_checkbox"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option_b_text"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/option_c_card"
+        android:layout_width="@dimen/card_view_width"
+        android:layout_height="@dimen/card_view_height"
+        app:cardCornerRadius="@dimen/card_view_radious"
+        android:elevation="@dimen/card_view_elevation"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="@dimen/card_view_side_margin"
+        app:layout_constraintTop_toBottomOf="@id/option_a_card"
+        app:layout_constraintEnd_toStartOf="@id/option_d_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/card_view_height">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/option_c_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_dark"
+                android:text="@string/third_option_name"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/rounded_checkbox"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option_c_text"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/option_d_card"
+        android:layout_width="@dimen/card_view_width"
+        android:layout_height="@dimen/card_view_height"
+        app:cardCornerRadius="@dimen/card_view_radious"
+        android:elevation="@dimen/card_view_elevation"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="@dimen/card_view_side_margin"
+        app:layout_constraintTop_toBottomOf="@id/option_b_card"
+        app:layout_constraintStart_toEndOf="@id/option_c_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/card_view_width"
+            android:layout_height="@dimen/card_view_height">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/option_d_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_dark"
+                android:text="@string/fourth_option_name"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/rounded_checkbox"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/option_d_text"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
